@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Про тортики</title>
+  
+  <style type = "text/css">
+    .h2 {
+	    color: rgb(255, 0, 34); 
+	    font-size: 40px; 
+	    font-family: Arial;
+        text-align: center;
+    }
+
+	.aligncenter {
+        text-align: center;
+        }
+
+    .h1 {
+        text-align: center;
+        font-size: 60px;
+    }
+
+    .basetext {
+        text-align: left;
+        font-size: 16px;
+        text-align: start;
+    }
+
+    .quotation {
+        text-align: right;
+        font-size: 14px; 
+        font-family: Arial;
+    }
+ 
+ </style>
+   
+ </head>
+ <body>
+  <h1 class = "h1">Торты</h1>
+  <!-- Комментарий -->
+  
+  <p class = "h2">Начало о тортиках</p>
+  <blockquote cite = "https://proza.ru/2018/01/05/2267">
+        <pre class = "quotation"> 
+            <i> — Вы чай с чем будете пить? С вареньем или с лимоном?
+                — С удовольствием!
+            </i> 
+        </pre>
+  </blockquote>
+    <p class = "basetext">
+            Lorem ipsum dolor sit amet,
+            <b>consectetur adipiscing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lectus mauris
+            <br>ultrices eros in cursus turpis massa tincidunt. Ut eu sem integer vitae justo eget magna. Quis blandit turpis cursus in hac habitasse platea
+            <br>dictumst. At imperdiet dui accumsan sit amet nulla. Orci a scelerisque purus semper. Tristique senectus et netus et malesuada fames ac
+            <br>turpis egestas. Ut faucibus pulvinar elementum integer enim neque. Diam phasellus vestibulum lorem sed risus ultricies. Dui accumsan sit
+            <br>amet nulla facilisi morbi tempus iaculis. Nunc non blandit massa enim nec dui. Pellentesque elit ullamcorper dignissim cras tincidunt
+            <br>lobortis feugiat vivamus at. Diam phasellus vestibulum lorem sed risus ultricies tristique nulla. Donec et odio pellentesque diam volutpat
+            <br>commodo sed egestas egestas. Et tortor at risus viverra adipiscing at in tellus integer.
+            
+         <br>
+        <a href="what.html" style="color: darkblue;">Ещё тортики what.html</a>
+    </p>
+    <p class = "basetext">
+        Laoreet sit amet cursus sit amet dictum sit amet justo. In fermentum et sollicitudin ac orci phasellus egestas. Porttitor leo a diam sollicitudin tempor id eu nisl. Senectus et netus et malesuada fames. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. Ornare quam viverra orci sagittis eu volutpat. Vitae semper quis lectus nulla at. Purus faucibus ornare suspendisse sed nisi lacus sed. In vitae turpis massa sed elementum tempus egestas sed sed. At risus viverra adipiscing at in tellus integer feugiat scelerisque. Natoque penatibus et magnis dis.
+    </p>
+    <a href="why.html">
+        <p class="aligncenter">
+            <img src="Nyam.jfif" alt="index.html" width="300" height="300"> 
+        </p>
+      
+    </a>
+  <h2><b>Плач и смотри</b></h2>
+    <form action="/submit" method="POST" enctype="multipart/form-data"> 
+        <label for="fname">Напиши имя</label><br>
+        <input type="text" id="fname-id" name="fname-name" placeholder="Екатерина"><br><br>   
+        <label for="lname">А фамилия?</label><br>
+        <input type="text" id="lname-id" name="lname-name" placeholder="Тартынова"><br><br>
+        <input type="submit" value="Отправить форму"></input>        
+    </form> 
+
+    <button type="button" onclick="send()">Отправить код</button>
+</body>
+
+<script>
+
+    var fname;
+    var lname;
+
+    function send()
+    {
+        fname = document.getElementById("fname-id").value;
+        lname = document.getElementById("lname-id").value;
+        var xhr = new XMLHttpRequest();
+        var params = 'fname=' + encodeURIComponent(fname) + '&' + 'lname=' + encodeURIComponent(lname);
+        xhr.open("POST", '/submit?' + params, true);
+        xhr.send();
+      
+    }
+</script>
+
+</html>
